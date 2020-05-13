@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- type="module" で deferと同じ。 DOM構築後に実行される -->
+  <script type="module" src="./index.js"></script>
+  <title>template-element</title>
+</head>
+<style>
+  /* html や bodyはstyleが両方に当たる */
+  p {
+    font-size: 40px;
+    color: red;
+  }
+</style>
+
+<body>
+  <main>
+    <div class="host">
+    </div>
+  </main>
+  <p>ここにはstyle当たらない</p>
+  <p>外からShadow DOM内にstyleを当てることは出きない。</p>
+  <p>逆にShadow DOM内からホストにstyleを当てられる</p>
+
+</body>
+
+</html>

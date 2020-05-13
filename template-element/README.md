@@ -1,4 +1,8 @@
 # template-element
+テンプレート機能
+
+<template> タグ内に書かれたHTMLコードは、一切評価されない
+
 
 出力されたHTML
 ```html

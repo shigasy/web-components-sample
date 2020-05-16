@@ -10,7 +10,7 @@ p.textContent = 'これがHTML要素'
 // style要素を作成
 const style = document.createElement('style')
 // :hostはshadow dom内
-style.textContent = ':host {background: grey;}p { color: #22b8cf }'
+style.textContent = ':host {background: grey;}'
 
 root.appendChild(style)
 root.appendChild(p)

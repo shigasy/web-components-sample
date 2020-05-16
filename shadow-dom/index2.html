@@ -1,0 +1,55 @@
+<html>
+<template id="template">
+  <style>
+    /* html {
+      color: tomato;
+    } */
+    /* {
+      font-size: 20px;
+    } */
+    div {
+      color: tomato;
+    }
+
+    /* div {
+      color: tomato;
+    } */
+  </style>
+
+  <body>
+    <div>
+      <h4 class="p">Hello</h4>
+      <p>Hello World</p>
+    </div>
+  </body>
+</template>
+<style>
+  p {
+    font-size: 100px;
+    color: blue;
+  }
+  .p {
+    font-size: 120px;
+  }
+
+  div {
+    color: yellow;
+  }
+</style>
+
+
+  <p>aa</p>
+
+  <div id="shadow-host" class="p">JavaScript無効環境、あるいはShadow DOM に対応していないブラウザです。Shadow DOM がサポートされているGoogle Chromeなどで閲覧してください。
+  </div>
+
+<script>
+  var shadowHost = document.querySelector('#shadow-host');
+  var shadowRoot = shadowHost.attachShadow({ mode: 'open' });
+  var template = document.querySelector('#template');
+  var clone = document.importNode(template.content, true);
+
+  shadowRoot.appendChild(clone);
+</script>
+
+</html>
